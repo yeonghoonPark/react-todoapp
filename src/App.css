@@ -45,14 +45,25 @@ body {
 
 .insert-todo input {
   width: 20rem;
-  height: 1.84rem;
+  height: 2.2rem;
   margin-right: 1rem;
+  padding-top: 0.2rem;
   color: #000;
 }
 
 .insert-todo button {
-  padding: 0.3rem;
-  color: #000;
+  height: 2.1rem;
+  padding: 0.5rem 0.3rem 0.3rem;
+  border: 2.1px solid #fff;
+  border-radius: 0.2rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.insert-todo button:hover {
+  background: #fff;
+  border: 2.1px solid #000;
+  color: #232b30;
 }
 
 /* OUTPUT-TODO */
@@ -75,8 +86,17 @@ body {
 
 .output-todo button {
   margin-right: 1rem;
-  padding: 0.1rem;
-  color: #000;
+  padding: 0.4rem 0.3rem 0.2rem;
+  border-radius: 0.2rem;
+  border: 1px solid #fff;
+  background: transparent;
+  cursor: pointer;
+}
+
+.output-todo button:hover {
+  background: #fff;
+  border: 1px solid #232b30;
+  color: #232b30;
 }
 
 .output-todo button:last-of-type {
