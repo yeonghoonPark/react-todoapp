@@ -11,113 +11,115 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #000 12%, #232b30);
+  background: url(./images/bg02.jpg) no-repeat center;
+  background-attachment: fixed;
 }
 
 .wrap {
   width: 100%;
-  max-width: 1200px;
-  height: 100vh;
-  margin: 0 auto;
-  background: url(./images/bg.jpg);
-  color: #232b30;
-}
-
-/* HEADER */
-.header .title {
-  padding: 5rem;
-  font-weight: 600;
-  font-size: 4rem;
-  text-align: center;
-  text-shadow: 2px 2px 2px #232b30;
-}
-
-/* INSERT-TODO */
-.insert-todo {
-  padding: 2rem;
-  text-align: center;
-}
-
-
-.insert-todo .title {
-  font-size: 2rem;
-  text-shadow: 2px 2px 2px #232b30;
-}
-
-.insert-todo input {
-  width: 20rem;
-  height: 2.5rem;
-  margin-right: 1rem;
-  padding: 0.3rem;
-  color: #000;
-}
-
-.insert-todo button {
-  height: 2.5rem;
-  padding: 0.3rem 0.6rem;
-  border: 2.1px solid #fff;
-  border-radius: 0.2rem;
-  background: transparent;
-  cursor: pointer;
-}
-
-.insert-todo button:hover {
-  background: #fff;
-  border: 2.1px solid #000;
-  color: #232b30;
-}
-
-/* OUTPUT-TODO */
-.output-todo {
-  width: 20rem;
-  margin: 0 auto;
-  padding: 1rem;
-  border: 2px solid #fff;
-  border-radius: 1rem;
-}
-
-.output-todo .container {
-  text-align: center;
-}
-
-.output-todo .title {
-  padding: 0.8rem;
-  text-shadow: 2px 2px 2px #232b30;
-}
-
-.output-todo button {
-  margin-right: 1rem;
-  padding: 0.3rem 0.5rem;
-  border-radius: 0.2rem;
-  border: 1px solid #fff;
-  background: transparent;
-  cursor: pointer;
-}
-
-.output-todo button:hover {
-  background: #fff;
-  border: 1px solid #232b30;
-  color: #232b30;
-}
-
-.output-todo button:last-of-type {
-  margin-right: 0;
-}
-
-/* FOOTER */
-.footer {
-  width: 100%;
+  height: 100vmax;
   max-width: 1200px;
   margin: 0 auto;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 1rem;
-  text-align: right;
+  color: #232b30;
 }
 
-.footer address {
-  font-size: 0.8rem;
-  text-shadow: 2px 2px 2px #232b30;
+/* 479px */
+@media (max-width:479px) {
+
+  /* 479px HEADER */
+  .header .title {
+    padding: 4rem 1rem;
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 2px 2px 2px #232b30;
+  }
+
+  /* 479px INSERT-TODO */
+  .insert-todo {
+    padding: 0 2rem 2rem;
+    text-align: center;
+  }
+
+  .insert-todo .title {
+    font-size: 1rem;
+    text-shadow: 2px 2px 2px #232b30;
+  }
+
+  .insert-todo input {
+    width: 10rem;
+    height: 2rem;
+    margin-right: 1rem;
+    padding: 0.3rem;
+    color: #000;
+  }
+
+  .insert-todo button {
+    height: 2rem;
+    padding: 0 0.6rem;
+
+    border: 2px solid #fff;
+    border-radius: 0.2rem;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .insert-todo button:hover {
+    background: #fff;
+    color: #232b30;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+
+  /* 479px OUTPUT-TODO */
+  .output-todo {
+    width: 16rem;
+    margin: 0 auto 2rem;
+    padding: 1rem;
+    border: 2px solid #fff;
+    border-radius: 1rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 12%, rgba(35, 43, 48, 0.7));
+  }
+
+  .output-todo .container {
+    text-align: center;
+  }
+
+  .output-todo .title {
+    padding: 0.8rem;
+    text-shadow: 2px 2px 2px #232b30;
+  }
+
+  .output-todo button {
+    margin-right: 1rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.2rem;
+    border: 1px solid #fff;
+    background: transparent;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+
+  .output-todo button:hover {
+    background: #fff;
+    color: #232b30;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+
+  .output-todo button:last-of-type {
+    margin-right: 0;
+  }
+
+  /* 479px FOOTER */
+  .footer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 0.5rem 1rem;
+    text-align: center;
+  }
+
+  .footer address {
+    font-size: 0.8rem;
+    text-shadow: 2px 2px 2px #232b30;
+  }
 }
