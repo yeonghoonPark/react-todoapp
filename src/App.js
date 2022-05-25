@@ -42,9 +42,6 @@ function App() {
         </section>
 
 
-
-
-
         {/* FOOTER */}
         <footer className="footer">
           <div className="container">
