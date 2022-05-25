@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Special Elite', cursive;
+  font-family: 'Noto Sans KR', sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #fff;
@@ -38,6 +38,7 @@ body {
   text-align: center;
 }
 
+
 .insert-todo .title {
   font-size: 2rem;
   text-shadow: 2px 2px 2px #232b30;
@@ -45,15 +46,15 @@ body {
 
 .insert-todo input {
   width: 20rem;
-  height: 2.2rem;
+  height: 2.5rem;
   margin-right: 1rem;
-  padding-top: 0.2rem;
+  padding: 0.3rem;
   color: #000;
 }
 
 .insert-todo button {
-  height: 2.1rem;
-  padding: 0.5rem 0.3rem 0.3rem;
+  height: 2.5rem;
+  padding: 0.3rem 0.6rem;
   border: 2.1px solid #fff;
   border-radius: 0.2rem;
   background: transparent;
@@ -86,7 +87,7 @@ body {
 
 .output-todo button {
   margin-right: 1rem;
-  padding: 0.4rem 0.3rem 0.2rem;
+  padding: 0.3rem 0.5rem;
   border-radius: 0.2rem;
   border: 1px solid #fff;
   background: transparent;
