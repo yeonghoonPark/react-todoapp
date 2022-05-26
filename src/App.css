@@ -81,6 +81,7 @@ body {
 
 .output-todo .title {
   padding: 0.8rem;
+  font-size: 1rem;
   text-shadow: 2px 2px 2px #232b30;
 }
 
@@ -119,15 +120,63 @@ body {
 }
 
 @media (min-width:480px) {
+
   /* 480px ~ 768px HEADER */
+  .header .title {
+    font-size: 3rem;
+  }
+
   /* 480px ~ 768px INSERT-TODO */
+  .insert-todo .title {
+    font-size: 1.5rem;
+  }
+
+  .insert-todo input {
+    width: 15rem;
+  }
+
   /* 480px ~ 768px OUTPUT-TODO */
+  .output-todo {
+    width: 20rem;
+  }
+
+  .output-todo .title {
+    font-size: 1.25rem;
+  }
+
   /* 480px ~ 768px FOOTER */
+  .footer address {
+    /* font-size: 1.2rem; */
+  }
 }
 
 @media (min-width:768px) {
+
   /* 768px ~ 1023px HEADER */
+  .header .title {
+    font-size: 4.5rem;
+  }
+
   /* 768px ~ 1023px INSERT-TODO */
+  .insert-todo .title {
+    font-size: 2.25rem;
+  }
+
+  .insert-todo input {
+    width: 22.5rem;
+  }
+
   /* 768px ~ 1023px OUTPUT-TODO */
+  .output-todo {
+    width: 25rem;
+  }
+
+  .output-todo .title {
+    font-size: 1.6rem;
+  }
+
   /* 768px ~ 1023px FOOTER */
+  .footer address {
+    /* font-size: 1.2rem; */
+  }
 }
