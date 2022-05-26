@@ -47,18 +47,16 @@ function App() {
         {/* INSERT-TODO */}
         <section className="insert-todo">
           <div className="container">
-            <form>
-              <label>
-                <h2 className="title">Write down What u have to do Today</h2>
-              </label>
-              <br />
-              <input type="text" value={inputValue} onChange={(event) => {
-                setInputValue(event.target.value);
-              }} />
-              <button onClick={addItem}>Insert</button>
-            </form>
-
-
+            {/* <form> */}
+            <label>
+              <h2 className="title">Write down What u have to do Today</h2>
+            </label>
+            <br />
+            <input type="text" value={inputValue} onChange={(event) => {
+              setInputValue(event.target.value);
+            }} />
+            <button onClick={addItem}>Insert</button>
+            {/* </form> */}
           </div>
         </section>
 
