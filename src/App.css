@@ -57,6 +57,7 @@ body {
   border-radius: 0.2rem;
   background: transparent;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .insert-todo button:hover {
@@ -66,14 +67,12 @@ body {
 }
 
 /* OUTPUT-TODO */
-
-
-.output-todo .container {
-  width: 16rem;
+.output-todo .output-todo-list {
+  width: 19rem;
   margin: 0 auto 2rem;
   padding: 1rem;
   border: 2px solid #fff;
-  border-radius: 1rem;
+  border-radius: 0.2rem;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 12%, rgba(35, 43, 48, 0.7));
   text-align: center;
 }
@@ -82,9 +81,16 @@ body {
   padding: 0.8rem;
   font-size: 1rem;
   text-shadow: 2px 2px 2px #232b30;
+  transition: 0.3s;
 }
 
-.output-todo button {
+.output-todo .title.active{
+  color: #000;
+  text-decoration: line-through;
+}
+
+.output-todo .del-btn,
+.output-todo .com-btn {
   margin-right: 1rem;
   padding: 0.3rem 0.5rem;
   border-radius: 0.2rem;
@@ -92,16 +98,32 @@ body {
   background: transparent;
   font-size: 0.8rem;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-.output-todo button:hover {
+.output-todo .del-btn:hover,
+.output-todo .com-btn:hover {
   background: #fff;
   color: #232b30;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-.output-todo button:last-of-type {
+.output-todo .del-btn.active{
   margin-right: 0;
+  border: 1px solid #fff;
+  background: #000;
+}
+
+.output-todo .del-btn.active:hover{
+  color: #fff;
+}
+
+.output-todo .com-btn {
+  margin-right: 0;
+}
+
+.output-todo .com-btn.active {
+  display: none;
 }
 
 /* FOOTER */
@@ -116,6 +138,7 @@ body {
 .footer address {
   font-size: 0.8rem;
   text-shadow: 2px 2px 2px #232b30;
+  text-indent: -9999px;
 }
 
 
@@ -137,8 +160,8 @@ body {
   }
 
   /* 480px ~ 768px OUTPUT-TODO */
-  .output-todo .container {
-    width: 20rem;
+  .output-todo .output-todo-list {
+    width: 22rem;
   }
 
   .output-todo .title {
@@ -165,8 +188,8 @@ body {
   }
 
   /* 768px ~ OUTPUT-TODO */
-  .output-todo .container {
-    width: 25rem;
+  .output-todo .output-todo-list {
+    width: 26rem;
   }
 
   .output-todo .title {
