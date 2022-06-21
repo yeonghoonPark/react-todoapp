@@ -37,7 +37,8 @@ body {
   text-align: center;
 }
 
-.insert-todo .title {
+.insert-todo .title,
+.insert-todo .clock {
   font-size: 1rem;
   text-shadow: 2px 2px 2px #232b30;
 }
@@ -151,7 +152,8 @@ body {
   }
 
   /* 480px ~ 768px INSERT-TODO */
-  .insert-todo .title {
+  .insert-todo .title,
+  .insert-todo .clock {
     font-size: 1.5rem;
   }
 
@@ -179,7 +181,8 @@ body {
   }
 
   /* 768px ~  INSERT-TODO */
-  .insert-todo .title {
+  .insert-todo .title,
+  .insert-todo .clock {
     font-size: 2.25rem;
   }
 
