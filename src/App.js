@@ -3,7 +3,7 @@
  *
  * React를 이용한 To-do List 제작, js코드
  *
- * 마지막 업데이트, 2022년 06월 21일
+ * 마지막 업데이트, 2022년 06월 23일
 */
 
 import './App.css';
@@ -18,38 +18,38 @@ const currentTime = () => {
   const clock = document.querySelector('.clock');
   clock.innerText = `${hours}:${minutes}:${seconds}`;
 }
-
 setInterval(currentTime, 1000);
 
 function App() {
 
   // useState
-  let [inputValue, setInputValue] = useState('');
-  let [todoList, setTodoList] = useState([]);
+  const [inputValue, setInputValue] = useState('');
+  const [todoList, setTodoList] = useState([]);
 
 
   // 'Insert' 클릭시 input에 입력 된 값을 <OutputTodo />로 출력하는 함수
-  function addItem() {
-    if (inputValue === '') {
-      alert('Please fill out the content :)');
-    } else {
+  const addItem = () => {
+    if(inputValue === ''){
+      alert('Please write down what you to do :)');
+    }else{
       setTodoList([...todoList, inputValue]);
+      setInputValue('');
     }
   }
 
   // 'Delete' 클릭시 <OutputTodo /> 제거하는 함수
-  let outputTodoListDelete = (event) => {
-    let delBtn = event.target;
-    let outputTodoList = delBtn.parentNode;
+  const outputTodoListDelete = (event) => {
+    const deleteBtn = event.target;
+    const outputTodoList = deleteBtn.parentNode;
     outputTodoList.remove();
   }
 
   // 'Complate' 클릭시 각각의 변수의 className에 active를 부여, CSS변경하는 함수
-  let completeStyle = (event) => {
-    let comBtn = event.target;
-    let delBtn = comBtn.previousSibling;
-    let outputTodoTitle = delBtn.previousSibling;
-    let completeStyleArray = [comBtn, delBtn, outputTodoTitle];
+  const completeStyle = (event) => {
+    const completeBtn = event.target;
+    const deleteBtn = completeBtn.previousSibling;
+    const outputTodoTitle = deleteBtn.previousSibling;
+    const completeStyleArray = [completeBtn, deleteBtn, outputTodoTitle];
     completeStyleArray.map((item) => {
       return item.classList.add('active');
     })
@@ -74,11 +74,12 @@ function App() {
             <h2 className="title">Write down What u have to do Today</h2>
             <h2 className="clock">00:00:00</h2>
             <br />
-            <input type="text" placeholder="00:00, To-do" value={inputValue} onChange={(event) => {
-              setInputValue(event.target.value);
-            }} />
-            <button onClick={addItem}>Insert</button>
-
+            <form id="insert-form" onSubmit={(event) => { event.preventDefault(); }}>
+              <input type="text" placeholder="00:00, To-do :)" value={inputValue} onChange={(event) => {
+                setInputValue(event.target.value);
+              }} />
+              <button onClick={addItem}>Insert</button>
+            </form>
           </div>
         </section>
 
